@@ -26,7 +26,7 @@ namespace Projeto_noticias.DAL
             //configurar endereço do servidor, nome do bd, e autenticar
 
 
-            con.ConnectionString = @"Data Source =(local)\sqlexpress; 
+            con.ConnectionString = @"Data Source =(local)\sql; 
                                      Initial Catalog=BDNoticias;
                                      Integrated Security=true";
 
