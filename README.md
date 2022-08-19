@@ -1,2 +1,2 @@
 # Site de Notícias
-Site criado em arquitetura N-Tier com ASP.NET Core.
+Projeto ASP.NET Core em arquitetura N-Tier de site de notícias.
