@@ -88,5 +88,32 @@ namespace Projeto_noticias.DAL
             con.Desconectar();
             return dt;
         }
+
+        //SOBRECARGA DE MÉTODO
+        //Métodos de mesmo nome com assinaturas diferentes
+        public DataTable Consultar(BLL.Categoria c)
+        {
+            //Tabela de Dados Padrão C# (int, string, bool, ...)
+            DataTable dt = new DataTable();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT COD, NOME " +
+                              "FROM TBCategoria" +
+                              "WHERE NOME LIKE @nome";
+
+            cmd.Parameters.AddWithValue("@nome", "%" + c.Nome + "%");
+
+            cmd.Connection = con.Conectar();
+
+            //Adaptador de dados SQL --> C#
+            SqlDataAdapter da = new SqlDataAdapter();
+            //Configurar o local(objeto) que possui consulta SQL
+            da.SelectCommand = cmd;
+
+            //Preencher o DataTable(dt) com os dados JÁ ADAPTADOS DO SQL
+            da.Fill(dt); //Executa a conulta no Servidor BD
+            con.Desconectar();
+            return dt;
+        }
     }
 }

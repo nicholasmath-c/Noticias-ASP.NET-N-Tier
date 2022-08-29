@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\CategoriaCAD.aspx" />
+    <Content Include="UI\CategoriaCON.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="UI\CategoriaCAD.aspx.designer.cs">
       <DependentUpon>CategoriaCAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CategoriaCON.aspx.cs">
+      <DependentUpon>CategoriaCON.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CategoriaCON.aspx.designer.cs">
+      <DependentUpon>CategoriaCON.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
